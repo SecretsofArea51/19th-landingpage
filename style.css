@@ -1,0 +1,282 @@
+:root{
+    --Very-Pale-Cyan: hsl(193, 100%, 96%);
+    --Very-Dark-Cyan: hsl(192, 100%, 9%);
+    --Grayish-Blue: hsl(208, 11%, 55%);
+    --Pink: hsl(322, 100%, 66%);
+    --heading-font: "Open Sans", serif;
+    --normal-font: "Poppins", serif;
+    --fsize-normal:18px;
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--normal-font);
+}
+h1{
+    font-family: var(--heading-font);
+}
+header{
+    background-color: var(--Very-Pale-Cyan);
+    background-image: url(images/bg-hero-mobile.svg);
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    margin-bottom: 6rem;
+}
+header .first{
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    width: min(45vw,240px);
+}
+.free button{
+    background-color: white;
+    border: 1px solid white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-inline: 1.25rem;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 20px 5px rgb(191, 200, 204);;
+    &:hover{
+        color: var(--Grayish-Blue);
+    }
+}
+.intro{
+    text-align: center;
+    margin-top: 3.5rem;
+}
+.intro h1{
+    margin-bottom: .5rem;
+}
+.catchy{
+    margin-bottom: 2rem;
+}
+.catchy p{
+    font-size: var(--fsize-normal);
+}
+.written{
+    margin-bottom: 2rem;
+}
+.started button{
+    background-color: var(--Pink);
+    border: 1px solid var(--Pink);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 20px 5px rgb(191, 200, 204);
+    &:hover{
+        background-color: rgb(250, 20, 135);
+        color: var(--Very-Pale-Cyan);
+    }
+}
+.mock img{
+    width: 100%;
+}
+
+
+
+.box{ 
+    margin-inline: auto;
+    max-width: 95vw;
+    box-shadow: 2px 2px 20px 0 rgb(74, 74, 74);
+    padding: 3rem;
+    border-radius: 1.75rem;
+    text-align: center;
+    margin-block: 2rem;
+}
+.box h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.box p{
+    color: var(--Grayish-Blue);
+    font-size: var(--fsize-normal);
+}
+.photo img{
+    width: 100%;
+}
+.fuck{
+    text-align: center;
+    max-width: max-content;
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
+
+    background-color: white;
+    box-shadow: 2px 2px 20px;
+    border-radius: 1rem;
+
+    position: relative;
+    bottom: -4rem;
+}
+.fuck>*{
+    margin-block: 1rem;
+}
+.fuck h1{
+    font-size: var(--fsize-normal);
+}
+.fuck button{
+    background-color: var(--Pink);
+    border: 1px solid var(--Pink);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 20px 5px rgb(191, 200, 204);
+    &:hover{
+        background-color:rgb(227, 45, 136);
+        color: var(--Very-Pale-Cyan);
+    }
+}
+
+footer{
+    background-color: var(--Very-Dark-Cyan);
+    color: white;
+    text-align: unset;
+}
+.parry{
+    padding: 1rem;
+    margin-top: 10rem;
+}
+footer .logo{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg);
+}
+.about>* ,.career>*{
+    margin-block: 1rem;
+    transition: rotate .5s;
+    &:hover{
+        rotate: 360deg;
+    }
+}
+.social{
+    text-align: center;
+}
+.social img{
+    width: 50px;
+    height: 50px;
+    rotate: 45deg;
+    transition: rotate 1s,filter 1s , transform 1s;
+    &:hover{
+        rotate: 0deg;
+        filter: invert(50%) sepia(100%) saturate(10000%) hue-rotate(330deg) brightness(100%) contrast(100%);
+        transform: scale(1.2);
+    }
+}
+
+.about>*>*, .career>*>*,.info>*,.social{
+    font-size: 1.35rem;
+    color: white;
+    text-decoration: none;
+    margin-block: 1rem;
+}
+@media(min-width:350px){
+    .fuck h1{
+        font-size: 1.3rem;
+    }
+}
+@media(min-width:400px){
+    .fuck h1{
+        font-size: 1.5rem;
+    }
+}
+@media(min-width:500px){
+    .fuck h1{
+        font-size: 1.75rem;
+    }
+}
+@media(min-width:610px){
+    footer{
+        text-align: center;
+    }
+    .fuck h1{
+        font-size: 2rem;
+    }
+}
+@media(min-width:700px){
+    .box{
+        display: flex;
+        text-align: left;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .box>*{
+        margin-inline: 0.5rem;
+        align-self: center;
+    }
+    .grow{
+        flex-direction: row-reverse;
+    }
+    .user{
+        flex-direction: row-reverse;
+    }
+    .fuck{
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+}
+@media(min-width:950px){
+header{
+    background-image: url(images/bg-hero-desktop.svg);
+    padding-inline: 2rem;
+    padding-top: 4rem;
+}
+.free button{
+    padding-inline: 4rem;
+    padding-block: 0.8rem;   
+}
+.intro{
+display: flex;
+}
+.intro>*{
+    align-self: center;
+    text-align: left;
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+}
+.catchy{
+    flex-basis: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+.intro h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.mock{
+    flex-grow: 3;
+    flex-basis: 600px;
+    flex-shrink: 0;
+}
+footer{
+    text-align:unset;
+}
+.parry{
+    margin-inline: auto;
+}
+.last{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+.last>*>*{
+    font-size: var(--fsize-normal);
+}
+.copy{
+    text-align: right;
+}
+}
+@media(min-width:1080px){
+.box{
+    padding-left: 7.5rem;
+    gap:5rem;
+}
+}
